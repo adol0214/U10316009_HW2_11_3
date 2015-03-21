@@ -21,7 +21,8 @@ class Account {
 	private double balance = 0;
 	private double annualInterestRate = 0;
 	private Date dateCreated;
-
+	
+	//constructor
 	Account(){
 	}
 	
@@ -30,6 +31,8 @@ class Account {
 		balance = newBalance;
 	}
 	
+	
+	//各個項目的set和get
 	void setId(int newId){
 		id = newId;
 	}
@@ -65,15 +68,18 @@ class Account {
 	double getMonthlyInterest(){
 		return balance*(annualInterestRate/1200);
 	}
-
+	
+	//領錢
 	void withdraw(double amount){
 		balance -= amount;
 	}
 
+	//存款
 	void deposit(double amount){
 		balance += amount;
 	}
-
+	
+	//印出資訊
 	public String toString(){
 		return "The account:\n" + "The ID: " + getId() + "\nThe balance: " + getBalance() +
 				"\nThe monthly interest: " + getMonthlyInterest() + "\nThe date: " + getDateCreated();
