@@ -85,3 +85,33 @@ class Account {
 				"\nThe monthly interest: " + getMonthlyInterest() + "\nThe date: " + getDateCreated();
 	}
 }
+
+class SavingAccount extends Account{
+	SavingAccount() {
+	}
+	
+	SavingAccount (int newId , double newBalance , double amount){
+		super.setId(newId);
+		super.setBalance(newBalance);
+		super.deposit(amount);
+	}
+	
+	public String toString(){
+		return super.toString();
+	}
+}
+
+class CheckingAccount extends Account{
+	CheckingAccount() {
+	}
+	
+	CheckingAccount (int newId , double newBalance){
+		super.setId(newId);
+		super.setBalance(newBalance);
+	}
+	
+	public String toString(){
+		return "The account:\n" + "The ID: " + getId() + "\nThe balance: " + getBalance() +
+				"\nThe monthly interest: " + getMonthlyInterest() + "\nThe date: " + getDateCreated();
+	}
+}
